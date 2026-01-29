@@ -1,0 +1,123 @@
+<!-- Updated Header Component -->
+<header class="header">
+    <div class="header-container">
+        
+        <!-- Logo Section -->
+        <div class="logo-section" id="logoButton">
+            <div class="logo-icon">
+                <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="logo-text">
+                <span class="logo-main">DecodeX</span>
+                <span class="logo-sub">Market with RSK</span>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="header-actions">
+            <!-- Last Updated Time Display -->
+            <div class="last-updated">
+                <i class="fas fa-clock"></i>
+                Last: <span id="lastUpdate">Never</span>
+            </div>
+            
+            <!-- Refresh Button -->
+            <button class="action-button refresh-button" id="refreshButton" title="Refresh Data">
+                <i class="fas fa-sync-alt"></i>
+            </button>
+
+            <!-- User Info & Logout -->
+            <div class="user-info">
+                <div class="user-details">
+                    <span class="user-name" id="userName"></span>
+                    <span class="user-role" id="userRole"></span>
+                </div>
+                <button class="logout-button" id="logoutButton" title="Logout">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button>
+            </div>
+
+            <!-- Hamburger Menu Button -->
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars" id="menuIcon"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-container">
+            <!-- Navigation Items -->
+            <nav class="nav-items">
+                <button class="nav-button active" data-page="home">
+                    <div class="nav-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    DASHBOARD
+                </button> 
+
+                <!-- ADMIN ONLY: Overview Page -->
+                <button class="nav-button admin-only" data-page="overview" style="display: none;">
+                    <div class="nav-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    MARKET OVERVIEW
+                </button>
+
+                <button class="nav-button" id="premiumIndicatorsButton">
+                    <div class="nav-icon">
+                        <i class="fas fa-crown"></i> 
+                    </div>
+                    PREMIUM INDICATORS
+                </button>
+                
+                <button class="nav-button" data-page="oi">
+                    <div class="nav-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    O.I ANALYSIS
+                </button>
+                
+                <button class="nav-button" data-page="gann">
+                    <div class="nav-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    GANN TOOL(SCALPING)
+                </button>
+                
+                <button class="nav-button" data-page="links">
+                    <div class="nav-icon">
+                        <i class="fas fa-link"></i>
+                    </div>
+                    USEFUL LINKS
+                </button>
+                
+                <button class="nav-button" data-page="contact">
+                    <div class="nav-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    CONTACT US
+                </button>
+            </nav>
+
+            <!-- User Info & Logout at Bottom -->
+            <div class="mobile-user-section">
+                <div class="divider"></div>
+                <div class="user-card">
+                    <div class="user-card-left">
+                        <div class="user-avatar">
+                            <i class="fas fa-user" id="mobileAvatarIcon"></i>
+                        </div>
+                        <div class="user-card-info">
+                            <h4 id="mobileUserName"></h4>
+                            <div class="user-card-badge" id="mobileUserRole"></div>
+                        </div>
+                    </div>
+                    <button class="mobile-logout-button" id="mobileLogoutButton" title="Logout">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
