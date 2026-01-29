@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DecodeXMarket - Trading Dashboard</title>
+    
+    <!-- External Dependencies -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components/header.css">
+    <link rel="stylesheet" href="assets/css/components/login.css">
+    <link rel="stylesheet" href="assets/css/components/cards.css">
+    <link rel="stylesheet" href="assets/css/layouts/dashboard.css">
+    <link rel="stylesheet" href="assets/css/pages/home.css">
+    <link rel="stylesheet" href="assets/css/components/gann-calculator.css">
+</head>
+<body>
+    <!-- LOGIN SYSTEM -->
+    <div class="login-overlay" id="loginOverlay">
+        <div class="login-box">
+            <div class="login-header">
+                <h2>DecodeXMarket</h2>
+                <p style="color: var(--gray);">Please login to access the dashboard</p>
+            </div>
+            
+            <div class="login-tabs">
+                <button class="login-tab active" data-tab="user">User Login</button>
+                <button class="login-tab" data-tab="admin">Admin Login</button>
+            </div>
+            
+            <!-- USER LOGIN -->
+            <div class="login-form active" id="userLoginForm">
+                <div class="form-group">
+                    <label for="userEmail">Email</label>
+                    <input type="email" id="userEmail" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="userPassword">Password</label>
+                    <input type="password" id="userPassword" placeholder="Enter your password">
+                </div>
+                <button class="login-btn" onclick="handleUserLogin()">Login</button>
+                
+                <div class="register-note">
+                    <p>Don't have an account? <a href="https://forms.gle/JhdWJDXDH93NHx6Y8" target="_blank" class="register-link">Register here</a></p>
+                </div>
+            </div>
+            
+            <!-- ADMIN LOGIN -->
+            <div class="login-form" id="adminLoginForm">
+                <div class="form-group">
+                    <label for="adminEmail">Admin ID</label>
+                    <input type="text" id="adminEmail" placeholder="Enter admin ID">
+                </div>
+                <div class="form-group">
+                    <label for="adminPassword">Password</label>
+                    <input type="password" id="adminPassword" placeholder="Enter admin password">
+                </div>
+                <button class="login-btn" onclick="handleAdminLogin()">Login as Admin</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN APP (HIDDEN UNTIL LOGIN) -->
+    <div id="mainApp" style="display: none;">
+        <!-- Header Component -->
+        <div id="header-container"></div>
+        
+        <!-- DATA UPDATE NOTICE -->
+        <div class="container">
+            <div class="data-update-notice">
+                <div class="notice-text">
+                    <span class="notice-label"><i class="fas fa-clock"></i> DATA UPDATE NOTICE:</span>
+                    Visit after 
+                    <span class="update-time">10:00 PM - 11:00 PM</span>
+                    for updated post-market analysis.
+                </div>
+                <div class="data-update-note">
+                    <i class="fas fa-info-circle"></i> PREDICTION FOR: NIFTY || SENSEX || BANKNIFTY.
+                </div>
+            </div>
+        </div>
+
+        <!-- MAIN CONTENT -->
+        <main class="container">
+            <!-- Page content will be loaded here -->
+            <div id="page-content"></div>
+        </main>
+
+        <!-- Footer Component -->
+        <div id="footer-container"></div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>
